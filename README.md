@@ -8,4 +8,5 @@ This is a repo for Docker image containing e compiled version of DCC
  - Docker image is based on debian:stable-slim
  - DCC starts as daemon listening on 10030/tcp port (maybe configurable in future releases)
 
- 
+# Example to start a container
+docker run --name dcc --restart=always -p 127.0.0.1:10030:10030 -d neomediatech/dcc
