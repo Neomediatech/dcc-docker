@@ -1,5 +1,5 @@
 FROM debian:stable-slim
-MAINTAINER Dario B. <docker@neomediatech.it>
+MAINTAINER Dario B. <https://hub.docker.com/r/neomediatech/dcc/>
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Europe/Rome
