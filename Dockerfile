@@ -6,9 +6,9 @@ ENV TZ=Europe/Rome
 ENV DCC_VERSION=1.3.162
 
 RUN apt-get -yq update && apt-get -y --no-install-recommends install \
-    ca-certificates curl gcc libc-dev make
+    apt-utils ca-certificates curl gcc libc-dev make
 
-# Distributed Checksum Clearinghouse - requires a source-compile
+# Download & Compile DCC
 RUN curl https://www.dcc-servers.net/dcc/source/old/dcc-${DCC_VERSION}.tar.Z | tar xzf - -C /tmp && ls -l /tmp
 RUN cd /tmp/dcc-${DCC_VERSION} && ./configure --disable-dccm && make install
 
@@ -17,6 +17,8 @@ RUN apt-get purge -yq binutils cpp gcc libc6-dev linux-libc-dev make && \
 
 COPY dcc_conf /var/dcc/dcc_conf
 COPY start.sh /usr/local/bin/start.sh
+
+RUN chmod +x /usr/local/bin/start.sh
 
 ENV USER_UID=1000
 ENV USER_GID=1000
