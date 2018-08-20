@@ -1,0 +1,10 @@
+version: '3.4'
+
+services:
+  dcc:
+    image: neomediatech/dcc
+    ports:
+      - 10030:10030
+    environment:
+      TZ:
+      # 4 ex: Europe/Rome
