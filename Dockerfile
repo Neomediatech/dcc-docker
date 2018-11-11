@@ -1,5 +1,9 @@
 FROM debian:stable-slim
-MAINTAINER Dario B. <https://hub.docker.com/r/neomediatech/dcc/>
+
+LABEL maintainer="docker-dario@neomediatech.it"
+LABEL it.neomediatech.dcc.version="1.3.163"
+LABEL it.neomediatech.dcc.build-time="2018-03-09"
+LABEL it.neomediatech.dcc.pkg-url="https://www.dcc-servers.net/dcc/source/"
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Europe/Rome
