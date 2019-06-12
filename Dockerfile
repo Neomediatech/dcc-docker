@@ -12,7 +12,6 @@ LABEL maintainer="docker-dario@neomediatech.it" \
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Europe/Rome
-ENV DCC_VERSION=2.3.165
 
 RUN apt-get -yq update && apt-get -y --no-install-recommends install \
     apt-utils ca-certificates curl gcc libc-dev make
