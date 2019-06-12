@@ -1,10 +1,11 @@
 FROM debian:stable-slim
 
 ENV DCC_VERSION=2.3.166
+ENV DCC_BUILD_DATE=2019-06-05
 
 LABEL maintainer="docker-dario@neomediatech.it" \ 
       org.label-schema.version=$DCC_VERSION \
-      org.label-schema.build-date=2019-06-05 \
+      org.label-schema.build-date=$DCC_BUILD_DATE \
       org.label-schema.vcs-type=Git \
       org.label-schema.vcs-url=https://github.com/Neomediatech/dcc-docker \
       org.label-schema.maintainer=Neomediatech \
