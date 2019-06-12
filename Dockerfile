@@ -1,9 +1,14 @@
 FROM debian:stable-slim
 
-LABEL maintainer="docker-dario@neomediatech.it"
-LABEL it.neomediatech.dcc.version="2.3.165"
-LABEL it.neomediatech.dcc.build-time="2018-05-26"
-LABEL it.neomediatech.dcc.pkg-url="https://www.dcc-servers.net/dcc/source/"
+ENV DCC_VERSION=2.3.166
+
+LABEL maintainer="docker-dario@neomediatech.it" \ 
+      org.label-schema.version=$DCC_VERSION \
+      org.label-schema.build-date=2019-06-05 \
+      org.label-schema.vcs-type=Git \
+      org.label-schema.vcs-url=https://github.com/Neomediatech/dcc-docker \
+      org.label-schema.maintainer=Neomediatech \
+      it.neomediatech.dcc.pkg-url="https://www.dcc-servers.net/dcc/source/old/"
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=Europe/Rome
