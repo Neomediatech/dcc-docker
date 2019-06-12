@@ -1,3 +1,8 @@
+[![](https://images.microbadger.com/badges/version/neomediatech/dcc.svg)](https://microbadger.com/images/neomediatech/dcc "Get your own version badge on microbadger.com")
+[![](https://images.microbadger.com/badges/image/neomediatech/dcc.svg)](https://microbadger.com/images/neomediatech/dcc)
+![](https://img.shields.io/github/last-commit/Neomediatech/dcc-docker.svg?style=plastic)
+![](https://img.shields.io/github/repo-size/Neomediatech/dcc-docker.svg?style=plastic)
+
 # Preface
 DCC is acronym of Distributed Checksum Clearinghouses. DCC is an anti-spam content filter that runs on a variety of operating systems. See https://en.wikipedia.org/wiki/Distributed_Checksum_Clearinghouse or https://www.dcc-servers.net/dcc/ for details.
 
