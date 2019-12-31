@@ -1,9 +1,12 @@
-FROM debian:stable-slim
+FROM neomediatech/ubuntu-base
 
-ENV DCC_VERSION=2.3.167
-ENV DCC_BUILD_DATE=2019-06-19
-ENV DEBIAN_FRONTEND=noninteractive
-ENV TZ=Europe/Rome
+ENV DCC_VERSION=2.3.167 \
+    DCC_BUILD_DATE=2019-06-19 \
+    DEBIAN_FRONTEND=noninteractive \
+    TZ=Europe/Rome \
+    USER_UID=1000 \
+    USER_GID=1000
+
 
 LABEL maintainer="docker-dario@neomediatech.it" \ 
       org.label-schema.version=$DCC_VERSION \
@@ -23,13 +26,10 @@ RUN apt-get -yq update && apt-get -y --no-install-recommends install \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/log/*
 
 COPY dcc_conf /var/dcc/dcc_conf
-COPY start.sh /usr/local/bin/start.sh
+COPY start.sh /
 
-RUN chmod +x /usr/local/bin/start.sh
-
-ENV USER_UID=1000
-ENV USER_GID=1000
+RUN chmod +x /start.sh
 
 EXPOSE 10030
 
-CMD ["/usr/local/bin/start.sh"]
+CMD ["/start.sh"]
