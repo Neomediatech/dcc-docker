@@ -1,4 +1,4 @@
-FROM neomediatech/ubuntu-base
+FROM neomediatech/ubuntu-base:latest
 
 ENV DCC_VERSION=2.3.167 \
     DCC_BUILD_DATE=2019-06-19 \
