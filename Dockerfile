@@ -2,11 +2,9 @@ FROM neomediatech/ubuntu-base:latest
 
 ENV VERSION=2.3.167 \
     DCC_BUILD_DATE=2019-06-19 \
-    DEBIAN_FRONTEND=noninteractive \
     SERVICE=dcc \
     USER_UID=1000 \
     USER_GID=1000
-
 
 LABEL maintainer="docker-dario@neomediatech.it" \ 
       org.label-schema.version=$VERSION \
@@ -19,8 +17,8 @@ LABEL maintainer="docker-dario@neomediatech.it" \
 # Download & Compile DCC
 RUN apt-get -yq update && apt-get -y --no-install-recommends install \
     apt-utils ca-certificates curl gcc libc-dev make && \
-    curl https://www.dcc-servers.net/dcc/source/old/dcc-${DCC_VERSION}.tar.Z | tar xzf - -C /tmp && ls -l /tmp && \
-    cd /tmp/dcc-${DCC_VERSION} && ./configure --disable-dccm && make install && \
+    curl https://www.dcc-servers.net/dcc/source/old/dcc-${VERSION}.tar.Z | tar xzf - -C /tmp && ls -l /tmp && \
+    cd /tmp/dcc-${VERSION} && ./configure --disable-dccm && make install && \
     apt-get purge -yq binutils cpp gcc libc6-dev linux-libc-dev make && \
     apt-get -y autoremove --purge && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/log/*
