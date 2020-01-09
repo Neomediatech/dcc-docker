@@ -1,15 +1,15 @@
 FROM neomediatech/ubuntu-base:latest
 
-ENV DCC_VERSION=2.3.167 \
+ENV VERSION=2.3.167 \
     DCC_BUILD_DATE=2019-06-19 \
     DEBIAN_FRONTEND=noninteractive \
-    TZ=Europe/Rome \
+    SERVICE=dcc \
     USER_UID=1000 \
     USER_GID=1000
 
 
 LABEL maintainer="docker-dario@neomediatech.it" \ 
-      org.label-schema.version=$DCC_VERSION \
+      org.label-schema.version=$VERSION \
       org.label-schema.build-date=$DCC_BUILD_DATE \
       org.label-schema.vcs-type=Git \
       org.label-schema.vcs-url=https://github.com/Neomediatech/dcc-docker \
