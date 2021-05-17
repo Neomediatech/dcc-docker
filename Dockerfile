@@ -1,7 +1,7 @@
 FROM neomediatech/ubuntu-base:latest
 
-ENV VERSION=2.3.167 \
-    DCC_BUILD_DATE=2019-06-19 \
+ENV VERSION=2.3.168 \
+    DCC_BUILD_DATE=2021-04-24 \
     SERVICE=dcc \
     USER_UID=1000 \
     USER_GID=1000
