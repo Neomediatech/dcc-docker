@@ -1,4 +1,4 @@
-FROM neomediatech/ubuntu-base:latest
+FROM neomediatech/ubuntu-base:20.04
 
 ENV VERSION=2.3.168 \
     DCC_BUILD_DATE=2021-04-24 \
