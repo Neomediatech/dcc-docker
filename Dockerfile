@@ -1,7 +1,7 @@
-FROM neomediatech/ubuntu-base:20.04
+FROM neomediatech/ubuntu-base:22.04
 
-ENV VERSION=2.3.168 \
-    DCC_BUILD_DATE=2021-04-24 \
+ENV VERSION=2.3.169 \
+    DCC_BUILD_DATE=2024-03-22 \
     SERVICE=dcc \
     USER_UID=1000 \
     USER_GID=1000
