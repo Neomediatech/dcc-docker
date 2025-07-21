@@ -31,8 +31,6 @@ jobs:
       update-image: "true"
       package-to-check: ""
       skip-type-from-base-image: "false"
-      derived-image-repo: "Neomediatech/dcc-docker"
-      derived-image-repo-ref: "master"
       image-type: "dcc"
     secrets:
       NOTIFY_CMD: ${{ secrets.NOTIFY_CMD }}
