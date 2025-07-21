@@ -1,14 +1,2 @@
 -----------------------------------
-lun 21 lug 2025, 19:44:58, CEST --- ghcr.io/neomediatech/dcc:2.3.169
-
-Report Summary
-
-┌─────────────────────────────────────────────────┬────────┬─────────────────┬─────────┐
-│                     Target                      │  Type  │ Vulnerabilities │ Secrets │
-├─────────────────────────────────────────────────┼────────┼─────────────────┼─────────┤
-│ ghcr.io/neomediatech/dcc:2.3.169 (ubuntu 22.04) │ ubuntu │        0        │    -    │
-└─────────────────────────────────────────────────┴────────┴─────────────────┴─────────┘
-Legend:
-- '-': Not scanned
-- '0': Clean (no security findings detected)
-
+lun 21 lug 2025, 19:48:44, CEST --- ghcr.io/neomediatech/dcc:2.3.169 NOT SCANNED
