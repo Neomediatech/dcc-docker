@@ -1,1 +1,2 @@
 lun 21 lug 2025, 19:53:31, CEST --- ghcr.io/neomediatech/dcc:latest UPDATED (image build needed: true)
+lun 21 lug 2025, 19:54:36, CEST --- ghcr.io/neomediatech/dcc:2.3.169 UPDATED (image build needed: true)
