@@ -1,2 +1,1 @@
-lun 21 lug 2025, 19:32:15, CEST --- ghcr.io/neomediatech/dcc:latest not-needed (image build needed: unknown)
-lun 21 lug 2025, 19:34:56, CEST --- ghcr.io/neomediatech/dcc:2.3.169 not-needed (image build needed: unknown)
+lun 21 lug 2025, 19:44:58, CEST --- ghcr.io/neomediatech/dcc:2.3.169 UPDATED (image build needed: true)
