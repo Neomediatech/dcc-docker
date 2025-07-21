@@ -5,6 +5,15 @@ on:
     # Esegui ogni giorno alle 04:00 UTC per controllare gli aggiornamenti.
     #- cron: '0 4 * * *'
   workflow_dispatch:
+    inputs:
+      force-build:
+        description: 'Forza la generazione delle immagini?'
+        required: true
+        default: "false"
+        type: choice
+        options:
+          - "true"
+          - "false"
 
 permissions:
   contents: write
@@ -18,12 +27,13 @@ jobs:
       base-image: ghcr.io/neomediatech/ubuntu-base
       package-name: neomediatech/dcc
       derived-image-prefix: ghcr.io/neomediatech/dcc
-      force-build: "false"
+      force-build: "${{ github.event.inputs.force-build }}"
       update-image: "true"
       package-to-check: ""
-      skip-type-from-base-image: "true"
+      skip-type-from-base-image: "false"
       derived-image-repo: "Neomediatech/dcc-docker"
       derived-image-repo-ref: "master"
+      image-type: "dcc"
     secrets:
       NOTIFY_CMD: ${{ secrets.NOTIFY_CMD }}
       NOTIFY_UP: ${{ secrets.NOTIFY_UP }}
