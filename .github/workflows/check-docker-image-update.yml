@@ -24,7 +24,6 @@ jobs:
   build-image:
     uses: Neomediatech/gh-workflows/.github/workflows/build-docker-image-bulk.yml@main
     with:
-      base-image: ghcr.io/neomediatech/ubuntu-base
       package-name: neomediatech/dcc
       derived-image-prefix: ghcr.io/neomediatech/dcc
       force-build: "${{ github.event.inputs.force-build }}"
