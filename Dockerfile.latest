@@ -2,19 +2,17 @@ FROM ghcr.io/neomediatech/ubuntu-base:22.04
 
 ENV VERSION=2.3.169 \
     SERVICE=dcc \
+    REPO=dcc-docker \
     USER_UID=1000 \
     USER_GID=1000
 
-LABEL maintainer="docker-dario@neomediatech.it" \ 
-      org.label-schema.version=$VERSION \
-      org.label-schema.vcs-type=Git \
-      org.label-schema.vcs-url=https://github.com/Neomediatech/dcc-docker \
-      org.label-schema.maintainer=Neomediatech \
+LABEL org.opencontainers.image.source=https://github.com/Neomediatech/${REPO} \
+      org.opencontainers.package.name="${SERVICE}" \
       it.neomediatech.dcc.pkg-url="https://www.dcc-servers.net/dcc/source/old/"
 
 # Download & Compile DCC
 RUN apt-get -yq update && apt-get -y --no-install-recommends install \
-    apt-utils ca-certificates curl gcc libc-dev make && \
+    gcc libc-dev make && \
     curl https://www.dcc-servers.net/dcc/source/old/dcc-${VERSION}.tar.Z | tar xzf - -C /tmp && ls -l /tmp && \
     cd /tmp/dcc-${VERSION} && ./configure --disable-dccm && make install && \
     apt-get purge -yq binutils cpp gcc libc6-dev linux-libc-dev make && \
