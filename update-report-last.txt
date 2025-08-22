@@ -1,0 +1,2 @@
+ven 22 ago 2025, 19:11:08, CEST --- ghcr.io/neomediatech/dcc:2.3.169 done (image build needed: true)
+ven 22 ago 2025, 19:11:09, CEST --- ghcr.io/neomediatech/dcc:latest done (image build needed: true)
