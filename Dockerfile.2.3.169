@@ -8,6 +8,7 @@ ENV VERSION=2.3.169 \
 
 LABEL org.opencontainers.image.source=https://github.com/Neomediatech/${REPO} \
       org.opencontainers.package.name="${SERVICE}" \
+      org.opencontainers.package.version="${VERSION}" \
       it.neomediatech.dcc.pkg-url="https://www.dcc-servers.net/dcc/source/old/"
 
 # Download & Compile DCC
